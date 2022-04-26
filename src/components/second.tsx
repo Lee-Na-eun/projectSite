@@ -10,7 +10,11 @@ function Second () {
                     <Chart />
                 </div>
             </NanniChartWrap>
-            <NanniInteractionWrap></NanniInteractionWrap>
+            <NanniInteractionWrap>
+                <div>Github</div>
+                <div>Notion</div>
+                <div>Email</div>
+            </NanniInteractionWrap>
         </SecondWrap>
     )
 }
