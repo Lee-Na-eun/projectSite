@@ -1,8 +1,16 @@
-import {MainWrap} from '../styled/mainStyle'
+import {MainWrap, NanniInfoWrap} from '../styled/mainStyle'
 
 function Main () {
     return (
-        <MainWrap>Main Page</MainWrap>
+        <MainWrap>
+            <NanniInfoWrap>
+                <div id="nanniImg"></div>
+                <div id="nickname">Nanni.</div>
+                <div id="intro">
+                    Front-end Developer
+                </div>
+            </NanniInfoWrap>
+        </MainWrap>
     )
 }
 

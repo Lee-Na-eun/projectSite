@@ -22,7 +22,7 @@ export const ButtonWrap = styled.div`
         margin-left : 15px;
         background-color : white;
         border : none;
-        border-radius : 10px;
+        border-radius : 30px;
         color : #0E1C50;
     }
 `

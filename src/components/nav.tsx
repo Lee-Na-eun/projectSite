@@ -6,9 +6,9 @@ function Nav () {
             <div>
                 <LogoWrap>Nanni</LogoWrap>
                 <ButtonWrap>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button>Main</button>
+                    <button>Intro</button>
+                    <button>View</button>
                 </ButtonWrap>
             </div>
         </NavWrap>
