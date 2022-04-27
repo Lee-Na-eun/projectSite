@@ -9,7 +9,7 @@ function Third () {
     return (
         <ThirdWrap>
             <ProjectWrap>
-                {projectData.map((el) => <ProjectBox>
+                {projectData.map((el, idx) => <ProjectBox key={idx}>
                     <ProjectTextWrap>
                         <h3>{el.title}</h3>
                         <p>{el.desc}</p>

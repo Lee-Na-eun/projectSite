@@ -12,12 +12,21 @@ export const MainWrap = styled.div`
 export const NanniInfoWrap = styled.div`
     width : 300px;
     height : 300px;
+    @media (max-width: 500px) {
+       width : 250px;
+       height : 250px;
+    }
     > #nanniImg {
         width : 200px;
         height : 200px;
         background-color : white;
         margin : 0 auto;
         border-radius : 200px;
+        
+        @media (max-width: 500px) {
+            width : 150px;
+            height : 150px;
+        }
     }
     > #nickname, #intro {
         height : 50px;
