@@ -6,29 +6,42 @@ export const ThirdWrap = styled.div`
     background-color : #262B3E;
     display : flex;
     justify-content : center;
-    align-items : center;
+    align-items : center;   
 `;
 
 export const ProjectWrap = styled.div`
     width : 800px;
-    height : 500px;
-    overflow : scroll;
+    height : 450px;
+    overflow-y : scroll;
+    @media (max-width: 900px) {
+        width : 500px;
+        height : 450px;
+    }
     ::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
+    }
+    @media (max-width: 500px) {
+        width : 300px;
+    }
+    @media (max-width: 300px) {
+        width : 240px;
     }
 `;
 
 export const ProjectBox = styled.div`
-    height : 500px;
-    width : 800px;
+    height : 450px;
     display : flex;
     justify-content: space-between;
     align-items : center;
+    @media (max-width: 900px) {
+        flex-direction : column;
+        height : 450px;
+        justify-content: center;
+    }
 `;
 
 export const ProjectTextWrap = styled.div`
     width : 330px;
-    height : 200px;
     text-align : left;
     color : white;
     > h3 {
@@ -38,11 +51,25 @@ export const ProjectTextWrap = styled.div`
         font-size : 13px;
         line-height : 28px;
     }
+    @media (max-width: 500px) {
+        width : 240px;
+    }
 `;
 
 export const ProjectGif = styled.div`
-    width : 450px;
     height : 300px;
+    width : 450px;
     background-color : white;
     border-radius : 10px;
+    // width : calc(100% - 330px - 15px);
+    // height : 30%;
+    @media (max-width: 900px) {
+        width : 330px;
+        height : 220px;
+    }
+    @media (max-width: 500px) {
+        width : 240px;
+        height : 160px;
+    }
+    
 `;
