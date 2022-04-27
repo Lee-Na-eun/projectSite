@@ -71,6 +71,8 @@ export const ChartBox = styled.div`
     display : flex;
     flex-direction : column;
     justify-content: space-evenly;
+    border : 1px solid #fff;
+    border-radius : 10px;
     > div {
         height : 30px;
     }
@@ -79,11 +81,11 @@ export const ChartBox = styled.div`
         background-color : #4A4372;
     }
     > div:nth-child(2){
-        width : 80%;
+        width : 70%;
         background-color : #545397;
     }
     > div:nth-child(3){
-        width : 60%;
+        width : 50%;
         background-color : #7472D0
     }
 `;
