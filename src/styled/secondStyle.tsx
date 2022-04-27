@@ -32,11 +32,12 @@ export const NanniInteractionWrap = styled.div`
     justify-content: space-between;
     > div {
         width : 200px;
-        height : 50px;
+        height : 40px;
         background-color : white;
-        border-radius : 50px;
-        line-height : 50px;
+        border-radius : 5px;
+        line-height : 40px;
         font-size : 14px;
+        color : #0E1C50;
     }
 `;
 
@@ -56,9 +57,9 @@ export const ChartLabelWrap = styled.div`
     color : white;
     > span {
         text-align : right;
-        height : 40px;
-        padding-left : 10px;
-        line-height : 40px;
+        height : 30px;
+        padding-right : 10px;
+        line-height : 30px;
         font-size : 13px;
         display : block;
     }
@@ -71,7 +72,7 @@ export const ChartBox = styled.div`
     flex-direction : column;
     justify-content: space-evenly;
     > div {
-        height : 40px;
+        height : 30px;
     }
     > div:nth-child(1){
         width : 70%;
