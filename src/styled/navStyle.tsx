@@ -19,7 +19,7 @@ export const ButtonWrap = styled.div`
     display : flex;
     justify-content: space-between;
     width : 270px;
-    @media (max-width: 700px) {
+    @media (max-width: 500px) {
         width : 80px;
         height : 120px;
         flex-direction : column;

@@ -12,15 +12,33 @@ export const SecondWrap = styled.div`
 export const NanniChartWrap = styled.div`
     width : 800px;
     display: flex;
+    justify-content: space-between;
+    @media (max-width: 900px) {
+        width : 80%;
+        height : 430px;
+        flex-direction : column;
+        justify-content: space-between;
+        align-items : center;
+    }
+    @media (max-width : 500px) {
+        height : 380px;
+    }
     > #nanniImg{
         width : 200px;
         height : 200px;
         background-color : white;
         border-radius : 200px;
+        @media (max-width: 500px) {
+            width : 150px;
+            height : 150px;
+        }
     }
     > #nanniChartWrap{
-        width : 500px;
+        width : 580px;
         height : 200px;
+        @media (max-width: 900px) {
+            width : 100%;
+        }
     }
 `;
 
@@ -30,6 +48,9 @@ export const NanniInteractionWrap = styled.div`
     display : flex;
     align-items : center;
     justify-content: space-between;
+    @media (max-width: 900px) {
+        width : 80%;
+    }
     > div {
         width : 200px;
         height : 40px;
@@ -38,13 +59,21 @@ export const NanniInteractionWrap = styled.div`
         line-height : 40px;
         font-size : 14px;
         color : #0E1C50;
+        @media (max-width: 900px) {
+            width : 30%;
+        }
+        @media (max-width: 500px) {
+            height : 30px;
+            line-height : 30px;
+            font-size : 12px;
+        }
     }
 `;
 
 export const ChartWrap = styled.div`
     display : flex;
     align-items : center;
-    width : 600px;
+    
 `;
 
 export const ChartLabelWrap = styled.div`
@@ -58,7 +87,7 @@ export const ChartLabelWrap = styled.div`
     > span {
         text-align : right;
         height : 30px;
-        padding-right : 10px;
+        padding-right : 20px;
         line-height : 30px;
         font-size : 13px;
         display : block;
@@ -66,15 +95,19 @@ export const ChartLabelWrap = styled.div`
 `;
 
 export const ChartBox = styled.div`
-    width : 500px;
+    width : 100%;
     height : 200px;
     display : flex;
     flex-direction : column;
     justify-content: space-evenly;
     border : 1px solid #fff;
+    box-sizing: border-box;
     border-radius : 10px;
     > div {
         height : 30px;
+        @media (max-width: 500px) {
+            height : 20px;
+        }
     }
     > div:nth-child(1){
         width : 70%;
