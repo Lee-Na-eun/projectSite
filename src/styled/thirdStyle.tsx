@@ -12,13 +12,10 @@ export const ThirdWrap = styled.div`
 export const ProjectWrap = styled.div`
     width : 800px;
     height : 450px;
-    overflow-y : scroll;
+    overflow:hidden;
     @media (max-width: 900px) {
         width : 500px;
         height : 450px;
-    }
-    ::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera*/
     }
     @media (max-width: 500px) {
         width : 300px;
@@ -28,17 +25,6 @@ export const ProjectWrap = styled.div`
     }
 `;
 
-export const ProjectBox = styled.div`
-    height : 450px;
-    display : flex;
-    justify-content: space-between;
-    align-items : center;
-    @media (max-width: 900px) {
-        flex-direction : column;
-        height : 450px;
-        justify-content: center;
-    }
-`;
 
 export const ProjectTextWrap = styled.div`
     width : 330px;
