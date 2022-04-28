@@ -1,19 +1,24 @@
 import {SecondWrap, NanniChartWrap, NanniInteractionWrap} from '../styled/secondStyle'
 import Chart from './chart'
-import {useRef} from "react";
+import {useRef, useEffect} from "react";
+import {useSelector, useDispatch} from "react-redux";
+import {scrollSecondNumber, scrollHeightStatus} from '../redux/scroll/secondScrollHeight'
 
 function Second () {
+    const dispatch = useDispatch();
+    const scrollNumberStatus = useSelector(scrollHeightStatus);
     const scrollRef:any = useRef<null | HTMLButtonElement>(null);
 
-    const testRef = () => {
-        console.log(typeof(scrollRef.current));
-        console.log(scrollRef.current.scrollHeight)
-    }
+    useEffect(() => {
+        dispatch(scrollSecondNumber({secondScrollHeight : scrollRef.current.scrollHeight}));
+    },[])
+
+    console.log('aaa',scrollNumberStatus);
 
     return (
         <SecondWrap ref={scrollRef}>
             <NanniChartWrap>
-                <div onClick={testRef} id="nanniImg"></div>
+                <div id="nanniImg"></div>
                 <div id="nanniChartWrap">
                     <Chart />
                 </div>

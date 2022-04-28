@@ -1,8 +1,8 @@
 import {combineReducers} from "redux";
-import findTagHeightReducer from './scroll/scrollHeight'
+import findTagHeightReducer from './scroll/secondScrollHeight'
 
 const reducer = combineReducers({
-    findTagHeight : findTagHeightReducer
+    secondFindTagHeight : findTagHeightReducer
 });
 
 export type ReducerType = ReturnType<typeof reducer>;

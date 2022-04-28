@@ -2,10 +2,6 @@ import {ThirdWrap, ProjectTextWrap, ProjectWrap, ProjectBox, ProjectGif} from ".
 import projectData from '../data/projectData'
 
 function Third () {
-    // function scrollTest ():void{
-    //     console.log('hi')
-    // }
-
     return (
         <ThirdWrap>
             <ProjectWrap>

@@ -1,20 +1,29 @@
 import {NavWrap, ButtonWrap, LogoWrap} from "../styled/navStyle";
-import {useRef} from "react";
+import {useSelector} from "react-redux";
+import {scrollHeightStatus} from '../redux/scroll/secondScrollHeight'
 
 function Nav () {
+    const scrollNumberStatus = useSelector(scrollHeightStatus);
 
-    // const scrollRef:any = useRef<null | HTMLButtonElement>(null);
-    //
-    // const testRef = () => {
-    //     console.log(typeof(scrollRef.current));
-    //     console.log(scrollRef.current.scrollHeight)
-    // }
-
-    function moveScrollTop ():void{
+    const moveScrollTop = ():void =>{
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
         });
+    }
+
+    const moveSecondScrollFix = ():void => {
+        window.scrollTo({
+            top : scrollNumberStatus.secondFindTagHeight.secondScrollHeight,
+            behavior: 'smooth',
+        })
+    }
+
+    const moveThirdScrollFix = ():void => {
+        window.scrollTo({
+            top : 100000,
+            behavior: 'smooth',
+        })
     }
 
     return (
@@ -23,8 +32,8 @@ function Nav () {
                 <LogoWrap>Nanni</LogoWrap>
                 <ButtonWrap>
                     <button onClick={moveScrollTop}>Main</button>
-                    <button>Intro</button>
-                    <button>View</button>
+                    <button onClick={moveSecondScrollFix}>Intro</button>
+                    <button onClick={moveThirdScrollFix}>View</button>
                 </ButtonWrap>
             </div>
         </NavWrap>
