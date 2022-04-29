@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import '../App.css';
+
 
 export const ThirdWrap = styled.div`
     height : 100vh;
@@ -13,6 +14,7 @@ export const ProjectWrap = styled.div`
     width : 800px;
     height : 450px;
     overflow:hidden;
+    background-color : red;
     @media (max-width: 900px) {
         width : 500px;
         height : 450px;
@@ -24,6 +26,77 @@ export const ProjectWrap = styled.div`
         width : 240px;
     }
 `;
+
+export const movingScrollRandom = [{
+    gone : `0% {
+        transform : translate(0,0);
+        }
+        100%{
+            transform : translate(-110%,0);
+        }`,
+    come : `0% {
+        transform : translate(100%,-100%);
+        }
+        100%{
+            transform : translate(0,-100%);
+        }`
+}, {
+    gone : ` 0% {
+          transform : translate(0,0);
+        }
+        100%{
+            transform : translate(110%,0);
+        }`,
+    come : ` 0% {
+          transform : translate(-100%,-100%);
+        }
+        100%{
+            transform : translate(0,-100%);
+        }`,
+}, {
+    gone : ` 0% {
+          transform : translate(0,0);
+        }
+        100%{
+            transform : translate(0,100%);
+        }`,
+    come : ` 0% {
+          transform : translate(0,-200%);
+        }
+        100%{
+            transform : translate(0,-100%);
+        }`
+}, {
+    gone : `0% {
+          transform : translate(0,0);
+        }
+        100%{
+            transform : translate(0,-100%);
+        }`,
+    come : `0% {
+          transform : translate(0,0);
+        }
+        100%{
+            transform : translate(0,-100%);
+        }`
+}]
+
+    const movingScroll = keyframes`
+       ${movingScrollRandom[0]}
+    `;
+
+export const ProjectBox1 = styled.div`
+        height : 450px;
+        display : flex;
+        justify-content: space-between;
+        align-items : center;
+        animation: ${movingScroll} 2s ease;
+        @media (max-width: 900px) {
+            flex-direction : column;
+            height : 450px;
+            justify-content: center;
+        }
+    `;
 
 
 export const ProjectTextWrap = styled.div`
