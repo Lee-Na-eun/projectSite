@@ -32,6 +32,7 @@ export const ButtonWrap = styled.div`
         border : none;
         border-radius : 30px;
         color : #0E1C50;
+        cursor : pointer;
     }
 `
 

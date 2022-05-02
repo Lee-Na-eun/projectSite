@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import nanniIllu from '../images/nanniIllu.png';
 
 export const SecondWrap = styled.div`
     height : 100vh;
@@ -28,9 +29,11 @@ export const NanniChartWrap = styled.div`
         height : 200px;
         background-color : white;
         border-radius : 200px;
+        background-image : url(${nanniIllu});
         @media (max-width: 500px) {
             width : 150px;
             height : 150px;
+            background-size : 150px;
         }
     }
     > #nanniChartWrap{
@@ -59,6 +62,12 @@ export const NanniInteractionWrap = styled.div`
         line-height : 40px;
         font-size : 14px;
         color : #0E1C50;
+        cursor : pointer;
+        > a {
+            text-decoration : none;
+            color : #0E1C50;
+            display : block;
+        }
         @media (max-width: 900px) {
             width : 30%;
         }

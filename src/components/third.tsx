@@ -32,11 +32,9 @@ function Third() {
       setNextIndex(0);
     }
 
-    console.log(randomStatus.randomIndex);
+    // console.log(randomStatus.randomIndex);
     // console.log(index);
   };
-  console.log('aaa', index);
-  console.log('bbb', nextIndex);
   // project 무한루프 돌게 해주기 위한 무한 index 값
 
   const goneScroll = keyframes`
@@ -80,15 +78,17 @@ function Third() {
           <ProjectTextWrap>
             <h3>{projectData[index].title}</h3>
             <p>{projectData[index].desc}</p>
+            <button><a href={projectData[index].url}>사이트 방문하기</a></button>
           </ProjectTextWrap>
-          <ProjectGif style={{backgroundImage:projectData[index].url}}></ProjectGif>
+          <ProjectGif style={{backgroundImage:projectData[index].gif}}></ProjectGif>
         </ProjectBox2>
         <ProjectBox1>
           <ProjectTextWrap>
             <h3>{projectData[nextIndex].title}</h3>
             <p>{projectData[nextIndex].desc}</p>
+            <button><a href={projectData[nextIndex].url}>사이트 방문하기</a></button>
           </ProjectTextWrap>
-          <ProjectGif style={{backgroundImage:projectData[nextIndex].url}}></ProjectGif>
+          <ProjectGif style={{backgroundImage:projectData[nextIndex].gif}}></ProjectGif>
         </ProjectBox1>
       </ProjectWrap>
     </ThirdWrap>

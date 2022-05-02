@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import '../App.css';
-import jurimma from '../images/ddoJurimma.gif'
 
 export const ThirdWrap = styled.div`
   height: 100vh;
@@ -95,6 +94,19 @@ export const ProjectTextWrap = styled.div`
   > p {
     font-size: 13px;
     line-height: 28px;
+  }
+  > button {
+    width : 120px;
+    height : 30px;
+    background-color:transparent;
+    border : 2px solid #fff;
+    border-radius : 6px;
+    > a {
+      text-decoration : none;
+      color : #fff;
+      font-size : 5px;
+      display : block;
+    }
   }
   @media (max-width: 500px) {
     width: 240px;
