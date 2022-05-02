@@ -16,19 +16,17 @@ export const NavWrap = styled.div`
 `;
 
 export const ButtonWrap = styled.div`
-    display : flex;
-    justify-content: space-between;
-    width : 270px;
-    background-color : orange;
+    display : block;
+    width : 260px;
+    transition : 0.5s;
     @media (max-width: 500px) {
-        width : 80px;
-        height : 120px;
+        width : 60px;
+        height : 150px;
         flex-direction : column;
         margin-top : 90px;
-        transition : 1s;
-        background-color : red;
     }
     > button{
+        margin-left : 10px; 
         width : 80px;
         height : 30px;
         background-color : white;
@@ -36,6 +34,16 @@ export const ButtonWrap = styled.div`
         border-radius : 30px;
         color : #0E1C50;
         cursor : pointer;
+        @media (max-width: 500px) {
+            margin-left : 0;
+            margin-top : 10px;
+            width : 40px;
+            height : 40px;
+            font-size : 10px;
+        }
+    }
+    > button:nth-child(1){
+        margin-left : 0;
     }
 `
 
