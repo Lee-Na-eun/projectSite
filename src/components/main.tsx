@@ -6,7 +6,8 @@ function Main () {
     return (
         <MainWrap>
             <NanniInfoWrap>
-                <div id="nanniImg">
+                <div id="nanniBorder">
+                    <div id="nanniImg"></div>
                 </div>
                 <div id="nickname">Nanni.</div>
                 <div id="intro">

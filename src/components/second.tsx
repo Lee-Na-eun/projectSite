@@ -23,7 +23,9 @@ function Second () {
     return (
         <SecondWrap ref={scrollRef}>
             <NanniChartWrap>
-                <div id="nanniImg"></div>
+                <div id="nanniBorder">
+                    <div id="nanniImg"></div>
+                </div>
                 <div id="nanniChartWrap">
                     <Chart />
                 </div>

@@ -19,11 +19,14 @@ export const ButtonWrap = styled.div`
     display : flex;
     justify-content: space-between;
     width : 270px;
+    background-color : orange;
     @media (max-width: 500px) {
         width : 80px;
         height : 120px;
         flex-direction : column;
         margin-top : 90px;
+        transition : 1s;
+        background-color : red;
     }
     > button{
         width : 80px;

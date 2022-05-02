@@ -11,6 +11,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { randomIndex, randomIndexStatus } from '../redux/random/randomIndex';
 import styled, { keyframes } from 'styled-components';
 
+let ing = false;
+
 function Third() {
   const dispatch = useDispatch();
   const randomStatus = useSelector(randomIndexStatus);
@@ -18,6 +20,13 @@ function Third() {
   const [nextIndex, setNextIndex] = useState(index + 1);
 
   const indexInfinite = () => {
+
+    if(ing){
+      return;
+    }
+
+    ing = true;
+
     dispatch(randomIndex({ randomIndex: Math.floor(Math.random() * 4) }));
 
     if (index < 2) {
@@ -34,6 +43,10 @@ function Third() {
 
     // console.log(randomStatus.randomIndex);
     // console.log(index);
+    // setIng(false);
+    setTimeout(() => {
+      ing = false
+    }, 1800);
   };
   // project 무한루프 돌게 해주기 위한 무한 index 값
 

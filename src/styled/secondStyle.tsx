@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import nanniIllu from '../images/nanniIllu.png';
+import {borderAnimation} from '../styled/mainStyle'
 
 export const SecondWrap = styled.div`
     height : 100vh;
@@ -24,7 +25,22 @@ export const NanniChartWrap = styled.div`
     @media (max-width : 500px) {
         height : 380px;
     }
-    > #nanniImg{
+    > #nanniBorder{
+        width : 215px;
+        height : 215px;
+        background-color : red;
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        border-radius : 250px;
+        background: linear-gradient(45deg,#1448FF, #C214FF, red);
+        animation: ${borderAnimation} 5s ease infinite;
+        background-size: 200% 100%;
+        @media (max-width: 500px) {
+            width : 165px;
+            height : 165px;
+        }
+        > #nanniImg{
         width : 200px;
         height : 200px;
         background-color : white;
@@ -35,6 +51,7 @@ export const NanniChartWrap = styled.div`
             height : 150px;
             background-size : 150px;
         }
+    }
     }
     > #nanniChartWrap{
         width : 580px;
