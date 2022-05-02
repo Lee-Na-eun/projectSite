@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import '../App.css';
+import jurimma from '../images/ddoJurimma.gif'
 
 export const ThirdWrap = styled.div`
   height: 100vh;
@@ -84,23 +85,6 @@ export const movingScrollRandom = [
   },
 ];
 
-const movingScroll = keyframes`
-       ${movingScrollRandom[0]}
-    `;
-
-export const ProjectBox1 = styled.div`
-  height: 450px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  animation: ${movingScroll} 2s ease;
-  @media (max-width: 900px) {
-    flex-direction: column;
-    height: 450px;
-    justify-content: center;
-  }
-`;
-
 export const ProjectTextWrap = styled.div`
   width: 330px;
   text-align: left;
@@ -122,6 +106,8 @@ export const ProjectGif = styled.div`
   width: 450px;
   background-color: white;
   border-radius: 10px;
+  background-position: center;
+  background-size: cover;
   // width : calc(100% - 330px - 15px);
   // height : 30%;
   @media (max-width: 900px) {

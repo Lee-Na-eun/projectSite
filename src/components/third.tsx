@@ -81,14 +81,14 @@ function Third() {
             <h3>{projectData[index].title}</h3>
             <p>{projectData[index].desc}</p>
           </ProjectTextWrap>
-          <ProjectGif></ProjectGif>
+          <ProjectGif style={{backgroundImage:projectData[index].url}}></ProjectGif>
         </ProjectBox2>
         <ProjectBox1>
           <ProjectTextWrap>
             <h3>{projectData[nextIndex].title}</h3>
             <p>{projectData[nextIndex].desc}</p>
           </ProjectTextWrap>
-          <ProjectGif></ProjectGif>
+          <ProjectGif style={{backgroundImage:projectData[nextIndex].url}}></ProjectGif>
         </ProjectBox1>
       </ProjectWrap>
     </ThirdWrap>
