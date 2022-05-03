@@ -19,7 +19,8 @@ function Third() {
   const [index, setIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState(index + 1);
 
-  const indexInfinite = () => {
+  const indexInfinite = (event : any) => {
+    event.stopPropagation();
 
     if(ing){
       return;
@@ -83,6 +84,7 @@ function Third() {
       justify-content: center;
     }
   `;
+
 
   return (
     <ThirdWrap>
