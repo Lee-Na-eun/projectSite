@@ -5,26 +5,19 @@ import Second from './components/second';
 import Third from './components/third';
 import Nav from "./components/nav";
 
-let ing = false;
-
 function App() {
     const pageHeight = window.innerHeight;
     const outerDivRef:any = useRef<null | HTMLDivElement>();
 
     const fullPageScroll = () => {
         window.addEventListener('wheel', function(event){
-            if(ing){
-                return;
-            }
-
-            ing = true;
 
             setTimeout(() => {
                 if(event.deltaY < 0){
                     if(window.scrollY <= pageHeight){
                         window.scrollTo({
                             top : 0,
-                            behavior : "smooth"
+                            behavior : "smooth",
                         })
                     }else {
                         window.scrollTo({
@@ -46,12 +39,9 @@ function App() {
                         })
                     }
                 }
-            }, 200)
+            }, 200);
 
         });
-        setTimeout(() => {
-            ing = false;
-        }, 200);
     }
 
 
