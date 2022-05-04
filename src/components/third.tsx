@@ -3,10 +3,10 @@ import {
   ProjectTextWrap,
   ProjectWrap,
   ProjectGif,
-  movingScrollRandom,
 } from '../styled/thirdStyle';
 import projectData from '../data/projectData';
 import { useState } from 'react';
+import {movingScrollRandom} from "../styled/animation";
 import { useSelector, useDispatch } from 'react-redux';
 import { randomIndex, randomIndexStatus } from '../redux/random/randomIndex';
 import styled, { keyframes } from 'styled-components';
@@ -42,9 +42,6 @@ function Third() {
       setNextIndex(0);
     }
 
-    // console.log(randomStatus.randomIndex);
-    // console.log(index);
-    // setIng(false);
     setTimeout(() => {
       ing = false
     }, 1800);
