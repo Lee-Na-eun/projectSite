@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import '../App.css';
+import {movingScrollRandom} from "./animation";
 
 export const ThirdWrap = styled.div`
   height: 100vh;
@@ -57,6 +58,30 @@ export const ProjectTextWrap = styled.div`
     width: 240px;
   }
 `;
+
+export const ProjectBox1 = styled.div`
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      height: 450px;
+      justify-content: center;
+    }
+  `;
+
+export const ProjectBox2 = styled.div`
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      height: 450px;
+      justify-content: center;
+    }
+  `;
 
 export const ProjectGif = styled.div`
   height: 300px;

@@ -5,41 +5,7 @@ import '../App.css'
 
 let sliding = false;
 
-function Main (props:any) {
-
-    console.log('idx=', props.idx)
-    // const dispatch = useDispatch();
-    // const pageStatus = useSelector(pageIndexStatus);
-    //
-    // const test = () => {
-    //     window.addEventListener('wheel', (event) => {
-    //         if(sliding){
-    //             return;
-    //         }
-    //
-    //         sliding = true;
-    //
-    //         if(event.deltaY > 0){
-    //             console.log("down");
-    //             dispatch(indexUp());
-    //         }else{
-    //             console.log("up");
-    //             dispatch(indexDown());
-    //         }
-    //     })
-    //
-    //     setTimeout(() => {
-    //         sliding = false;
-    //     }, 2000)
-    // }
-    //
-    // console.log(pageStatus.findPageIndex.pageIndex);
-    //
-    // if(pageStatus.findPageIndex.pageIndex === 1){
-    //     console.log("2페이지로 넘어가요~")
-    // }
-
-
+function Main () {
     return (
         <MainWrap>
             <NanniInfoWrap>

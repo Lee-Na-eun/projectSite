@@ -48,6 +48,11 @@ export const ButtonWrap = styled.div`
     > button:nth-child(1){
         margin-left : 0;
     }
+    > .currentPage{
+        background-color : #557AFF;
+        color : white;
+        transition : 0.5s;
+    }
 `
 
 export const LogoWrap = styled.div`

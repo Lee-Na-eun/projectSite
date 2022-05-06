@@ -1,39 +1,17 @@
 import {NavWrap, ButtonWrap, LogoWrap} from "../styled/navStyle";
-import {useSelector} from "react-redux";
-import {scrollHeightStatus} from '../redux/scroll/secondScrollHeight'
+// import {useSelector} from "react-redux";
+// import {scrollHeightStatus} from '../redux/scroll/secondScrollHeight'
 
-function Nav () {
-    const scrollNumberStatus = useSelector(scrollHeightStatus);
-
-    const moveScrollTop = ():void =>{
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }
-
-    const moveSecondScrollFix = ():void => {
-        window.scrollTo({
-            top : scrollNumberStatus.secondFindTagHeight.secondScrollHeight,
-            behavior: 'smooth',
-        })
-    }
-
-    const moveThirdScrollFix = ():void => {
-        window.scrollTo({
-            top : 100000,
-            behavior: 'smooth',
-        })
-    }
+function Nav (props:any) {
 
     return (
         <NavWrap>
             <div>
                 <LogoWrap>Nanni</LogoWrap>
                 <ButtonWrap>
-                    <button onClick={moveScrollTop}>Main</button>
-                    <button onClick={moveSecondScrollFix}>Intro</button>
-                    <button onClick={moveThirdScrollFix}>View</button>
+                    <button className={props.idx === 0 ? "currentPage" : undefined}>Main</button>
+                    <button className={props.idx === 1 ? "currentPage" : undefined}>Intro</button>
+                    <button className={props.idx === 2 ? "currentPage" : undefined}>View</button>
                 </ButtonWrap>
             </div>
         </NavWrap>

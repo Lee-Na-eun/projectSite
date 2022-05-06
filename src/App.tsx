@@ -25,6 +25,8 @@ function App() {
     }
 
     const wheelHandler = (e:any) => {
+        e.stopPropagation();
+
         if(sliding){
             return;
         }
@@ -52,9 +54,9 @@ function App() {
     console.log("startSliding", startSliding);
 
     return <div className={"App"} onWheel={wheelHandler}>
-        <Nav />
+        <Nav idx={idx} />
         <div className={!startSliding ? undefined : idx === 1 && isDown ? "animationUp1" : (startSliding &&  idx === 2 || (idx === 1 && !isDown) ? "stay" : "animationDown1")}>
-            <Main idx={idx} />
+            <Main />
         </div>
         <div className={idx === 2 && isDown ? "animationUp1" : (idx === 1 && !isDown) ? "animationDown2" : (idx === 0 && !isDown ? "animationUp2" : "animationUp3")}>
             <Second />
