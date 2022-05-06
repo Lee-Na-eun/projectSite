@@ -45,8 +45,6 @@ function Third() {
       setNextIndex(0);
     }
 
-    console.log("자식 스크롤 되는 중이냥...")
-
     setTimeout(() => {
       ing = false
     }, 1200);
@@ -58,7 +56,7 @@ function Third() {
   return (
     <ThirdWrap>
       <ProjectWrap onWheel={indexInfinite}>
-        <div className={!startSliding ? undefined : (randomStatus.randomIndex ? `movingGone${randomStatus.randomIndex}` : `movingGone${randomStatus.randomIndex}`)}>
+        <div className={!startSliding ? undefined : `movingGone${randomStatus.randomIndex}`}>
           <ProjectBox2>
             <ProjectTextWrap>
               <h3>{projectData[index].title}</h3>
@@ -68,7 +66,7 @@ function Third() {
             <ProjectGif style={{backgroundImage:projectData[index].gif}}></ProjectGif>
           </ProjectBox2>
         </div>
-        <div className={!startSliding ? undefined : (randomStatus.randomIndex ? `movingCome${randomStatus.randomIndex}` : `movingCome${randomStatus.randomIndex}`)}>
+        <div className={!startSliding ? undefined : `movingCome${randomStatus.randomIndex}`}>
           <ProjectBox1>
             <ProjectTextWrap>
               <h3>{projectData[nextIndex].title}</h3>

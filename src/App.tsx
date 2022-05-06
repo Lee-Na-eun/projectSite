@@ -21,7 +21,6 @@ function App() {
         if(idx > 0){
             setIdx(idx - 1);
         }
-        console.log(idx);
     }
 
     const wheelHandler = (e:any) => {
@@ -35,23 +34,17 @@ function App() {
         startSliding = true;
 
         if(e.deltaY > 0){
-            console.log("down")
             setIsDown(true);
             plus();
         }else{
-            console.log("up")
             setIsDown(false);
             minus();
         }
 
         setTimeout(() => {
             sliding = false;
-        }, 1500)
+        }, 2000)
     }
-
-    console.log("App - idx",idx);
-    console.log("isDown? : ", isDown);
-    console.log("startSliding", startSliding);
 
     return <div className={"App"} onWheel={wheelHandler}>
         <Nav idx={idx} />
