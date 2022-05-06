@@ -5,7 +5,10 @@ export const NavWrap = styled.div`
     height : 60px;
     width : 100vw;
     position : fixed;
+    z-index : 100;
+    background-color : red;
     > div {
+        background-color : orange;
         width : 90%;
         height : 60px;
         display : flex;
@@ -16,9 +19,11 @@ export const NavWrap = styled.div`
 `;
 
 export const ButtonWrap = styled.div`
-    display : block;
     width : 260px;
+    height :30px;
     transition : 0.5s;
+    background-color : pink;
+    display : flex;
     @media (max-width: 500px) {
         width : 60px;
         height : 150px;
@@ -34,6 +39,7 @@ export const ButtonWrap = styled.div`
         border-radius : 30px;
         color : #0E1C50;
         cursor : pointer;
+        display : block;
         @media (max-width: 500px) {
             margin-left : 0;
             margin-top : 10px;

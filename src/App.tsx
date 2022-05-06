@@ -3,75 +3,75 @@ import './App.css';
 import Main from './components/main';
 import Second from './components/second';
 import Third from './components/third';
+import Nav from "./components/nav";
 import {keyframes} from "styled-components";
 
-let aaa = false;
+let sliding = false;
+let startSliding = false;
 function App() {
     const [idx, setIdx] = useState(0);
-    const [sliding, setSliding] = useState(false);
-    const [classes, setClasses] = useState("App");
+    const [isDown, setIsDown] = useState(false);
 
     const plus = () => {
         if(idx < 2){
             setIdx(idx + 1);
-            // setClasses("");
         }
-        console.log(idx);
     }
 
     const minus = () => {
         if(idx > 0){
             setIdx(idx - 1);
         }
-        setSliding(true);
         console.log(idx);
     }
 
     const wheelHandler = (e:any) => {
-        if(aaa){
+        if(sliding){
             return;
         }
 
-        aaa = true;
+        sliding = true;
+        startSliding = true;
 
         if(e.deltaY > 0){
             console.log("down")
+            setIsDown(true);
             plus();
-            setSliding(true);
         }else{
             console.log("up")
+            setIsDown(false);
             minus();
         }
 
+        // if(e.deltaY > 0){
+        //     if(idx === 1){
+        //         console.log("2페이지로 전환");
+        //     }else if(idx === 1){
+        //         console.log("3페이지로 전환");
+        //     }
+        // }
+
         setTimeout(() => {
-            aaa = false;
+            sliding = false;
         }, 2000)
     }
 
+    console.log("App - idx",idx);
+    console.log("isDown? : ", isDown);
+    console.log("startSliding", startSliding);
 
-
-    console.log("sliding", sliding);
-
-    return <div className={classes} onWheel={wheelHandler}>
-        <Main idx={idx} />
-        <Second />
-        <Third />
+    return <div className={"App"} onWheel={wheelHandler}>
+        <Nav />
+        <div className={idx === 1 && isDown ? "animationUp1" : (idx === 2 || (idx === 1 && !isDown) ? "stay" : "animationDown1")}>
+            <Main idx={idx} />
+        </div>
+        <div className={idx === 2 && isDown ? "animationUp1" : (idx === 1 && !isDown) ? "animationDown2" : (idx === 0 && !isDown  ? "animationUp2" : "animationUp3")}>
+            <Second />
+        </div>
+        <div className={idx === 1 && !isDown ? "animationDown1" : (idx === 2 && isDown ? "animationUp3" : undefined)}>
+            <Third />
+        </div>
     </div>
-
-    // if(idx === 0){
-    //     return <div className={classes} onWheel={wheelHandler} style={sliding ? {animation : `${sliding} 2s ease`} : {}}>
-    //         <Main />
-    //     </div>
-    // }else if(idx === 1){
-    //     return <div className={classes} onWheel={wheelHandler}>
-    //         <Second />
-    //     </div>
-    //
-    // }else{
-    //     return <div className={classes} onWheel={wheelHandler}>
-    //         <Third />
-    //     </div>
-    // }
 }
 
 export default App;

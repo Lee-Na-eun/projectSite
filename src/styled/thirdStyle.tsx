@@ -3,10 +3,14 @@ import '../App.css';
 
 export const ThirdWrap = styled.div`
   height: 100vh;
+  width : 100vw;
   background-color: #262b3e;
   display: flex;
   justify-content: center;
   align-items: center;
+  position : absolute;
+  top : 0;
+  z-index : -1;
 `;
 
 export const ProjectWrap = styled.div`

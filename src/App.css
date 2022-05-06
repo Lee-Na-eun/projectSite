@@ -51,5 +51,95 @@
   }
 }
 
+@keyframes slideUp1 {
+  0% {
+    transform : translate(0,0);
+  }
+  100%{
+    transform : translate(0,-100%);
+  }
+}
+
+@keyframes slideUp2 {
+  0% {
+    transform : translate(0,0);
+  }
+  100%{
+    transform : translate(0,100%);
+  }
+}
+
+@keyframes slideUp3 {
+  0% {
+    transform : translate(0,100%);
+  }
+  100%{
+    transform : translate(0,0);
+  }
+}
+
+@keyframes slideDown1 {
+  0% {
+    transform : translate(0,-100%);
+  }
+  100%{
+    transform : translate(0,0);
+  }
+}
+
+@keyframes slideDown2 {
+  0% {
+    transform : translate(0,-100%);
+  }
+  100%{
+    transform : translate(0,0);
+  }
+}
+
+
+.animationUp1{
+  width : 100vw;
+  height: 100vh;
+  /*background-color: red;*/
+  position : absolute;
+  top : 0;
+  animation: slideUp1 2s ease forwards;
+}
+
+.animationUp2{
+  width : 100vw;
+  height: 100vh;
+  /*background-color: red;*/
+  /*position : absolute;*/
+  animation: slideUp2 2s ease forwards;
+}
+
+.animationUp3{
+  width : 100vw;
+  height: 100vh;
+  /*background-color: red;*/
+  /*position : absolute;*/
+  animation: slideUp3 2s ease forwards;
+}
+
+.animationDown1{
+  width : 100vw;
+  height: 100vh;
+  position : absolute;
+  z-index : 10;
+  animation: slideDown1 2s ease forwards;
+}
+
+.animationDown2{
+  width : 100vw;
+  height: 100vh;
+  /*background-color: red;*/
+  /*position : absolute;*/
+  animation: slideDown2 2s ease forwards;
+}
+
+.stay{
+  display : none;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
