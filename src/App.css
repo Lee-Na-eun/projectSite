@@ -103,7 +103,7 @@
   /*background-color: red;*/
   position : absolute;
   top : 0;
-  animation: slideUp1 2s ease forwards;
+  animation: slideUp1 1.5s ease forwards;
 }
 
 .animationUp2{
@@ -111,7 +111,7 @@
   height: 100vh;
   /*background-color: red;*/
   /*position : absolute;*/
-  animation: slideUp2 2s ease forwards;
+  animation: slideUp2 1.5s ease forwards;
 }
 
 .animationUp3{
@@ -119,7 +119,7 @@
   height: 100vh;
   /*background-color: red;*/
   /*position : absolute;*/
-  animation: slideUp3 2s ease forwards;
+  animation: slideUp3 1.5s ease forwards;
 }
 
 .animationDown1{
@@ -127,7 +127,7 @@
   height: 100vh;
   position : absolute;
   z-index : 10;
-  animation: slideDown1 2s ease forwards;
+  animation: slideDown1 1.5s ease forwards;
 }
 
 .animationDown2{
@@ -135,7 +135,7 @@
   height: 100vh;
   /*background-color: red;*/
   /*position : absolute;*/
-  animation: slideDown2 2s ease forwards;
+  animation: slideDown2 1.5s ease forwards;
 }
 
 .stay{

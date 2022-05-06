@@ -4,7 +4,6 @@ import Main from './components/main';
 import Second from './components/second';
 import Third from './components/third';
 import Nav from "./components/nav";
-import {keyframes} from "styled-components";
 
 let sliding = false;
 let startSliding = false;
@@ -43,17 +42,9 @@ function App() {
             minus();
         }
 
-        // if(e.deltaY > 0){
-        //     if(idx === 1){
-        //         console.log("2페이지로 전환");
-        //     }else if(idx === 1){
-        //         console.log("3페이지로 전환");
-        //     }
-        // }
-
         setTimeout(() => {
             sliding = false;
-        }, 2000)
+        }, 1500)
     }
 
     console.log("App - idx",idx);
@@ -62,10 +53,10 @@ function App() {
 
     return <div className={"App"} onWheel={wheelHandler}>
         <Nav />
-        <div className={idx === 1 && isDown ? "animationUp1" : (idx === 2 || (idx === 1 && !isDown) ? "stay" : "animationDown1")}>
+        <div className={!startSliding ? undefined : idx === 1 && isDown ? "animationUp1" : (startSliding &&  idx === 2 || (idx === 1 && !isDown) ? "stay" : "animationDown1")}>
             <Main idx={idx} />
         </div>
-        <div className={idx === 2 && isDown ? "animationUp1" : (idx === 1 && !isDown) ? "animationDown2" : (idx === 0 && !isDown  ? "animationUp2" : "animationUp3")}>
+        <div className={idx === 2 && isDown ? "animationUp1" : (idx === 1 && !isDown) ? "animationDown2" : (idx === 0 && !isDown ? "animationUp2" : "animationUp3")}>
             <Second />
         </div>
         <div className={idx === 1 && !isDown ? "animationDown1" : (idx === 2 && isDown ? "animationUp3" : undefined)}>

@@ -6,9 +6,7 @@ export const NavWrap = styled.div`
     width : 100vw;
     position : fixed;
     z-index : 100;
-    background-color : red;
     > div {
-        background-color : orange;
         width : 90%;
         height : 60px;
         display : flex;
@@ -22,7 +20,6 @@ export const ButtonWrap = styled.div`
     width : 260px;
     height :30px;
     transition : 0.5s;
-    background-color : pink;
     display : flex;
     @media (max-width: 500px) {
         width : 60px;
