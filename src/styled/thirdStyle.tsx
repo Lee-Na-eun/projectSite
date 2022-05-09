@@ -34,6 +34,7 @@ export const ProjectTextWrap = styled.div`
   width: 330px;
   text-align: left;
   color: white;
+  transition : 0.5s;
   > h3 {
     font-size: 22px;
   }
@@ -53,6 +54,9 @@ export const ProjectTextWrap = styled.div`
       font-size : 5px;
       display : block;
     }
+  }
+  @media (max-width: 900px) {
+    margin-bottom : 20px;
   }
   @media (max-width: 500px) {
     width: 240px;
@@ -90,6 +94,7 @@ export const ProjectGif = styled.div`
   border-radius: 10px;
   background-position: center;
   background-size: cover;
+  transition : 0.5s;
   // width : calc(100% - 330px - 15px);
   // height : 30%;
   @media (max-width: 900px) {

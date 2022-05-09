@@ -25,6 +25,7 @@ export const MainWrap = styled.div`
 export const NanniInfoWrap = styled.div`
     width : 300px;
     height : 300px;
+    transition : 0.5s;
     @media (max-width: 500px) {
        width : 250px;
        height : 250px;
