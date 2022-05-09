@@ -16,6 +16,7 @@ export const NanniChartWrap = styled.div`
     width : 800px;
     display: flex;
     justify-content: space-between;
+    transition : 0.5s;
     @media (max-width: 900px) {
         width : 80%;
         height : 430px;
@@ -67,6 +68,7 @@ export const NanniInteractionWrap = styled.div`
     height : 100px;
     width : 800px;
     display : flex;
+    transition : 0.5s;
     align-items : center;
     justify-content: space-between;
     @media (max-width: 900px) {
