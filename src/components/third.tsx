@@ -8,10 +8,8 @@ import {
 } from '../styled/thirdStyle';
 import projectData from '../data/projectData';
 import { useState } from 'react';
-import {movingScrollRandom} from "../styled/animation";
 import { useSelector, useDispatch } from 'react-redux';
 import { randomIndex, randomIndexStatus } from '../redux/random/randomIndex';
-import styled, { keyframes } from 'styled-components';
 
 let ing = false;
 let startSliding = false;
@@ -22,7 +20,6 @@ function Third() {
   const [nextIndex, setNextIndex] = useState(index + 1);
 
   const indexInfinite = (event : any) => {
-    // event.stopImmediatePropagation();
     event.stopPropagation();
     if(ing){
       return;
@@ -31,7 +28,19 @@ function Third() {
     ing = true;
     startSliding = true;
 
-    dispatch(randomIndex({ randomIndex: Math.floor(Math.random() * 4) }));
+    let findOverlap:number = Math.floor(Math.random() * 4);
+    console.log('overlap : ', findOverlap);
+
+    if(randomStatus.randomIndex === findOverlap){
+        console.log('중복')
+        if(randomStatus.randomIndex === 3){
+          findOverlap = 0
+        }else{
+          findOverlap += 1;
+        }
+    }
+
+    dispatch(randomIndex({ randomIndex: findOverlap}));
 
     if (index < 2) {
       setIndex(index + 1);
@@ -49,13 +58,13 @@ function Third() {
       ing = false
     }, 1200);
   };
-  // project 무한루프 돌게 해주기 위한 무한 index 값
+  // project 무한하게 돌게 해주기 위한 무한 index 값
 
-
+  console.log('randomStatus : ', randomStatus.randomIndex);
 
   return (
     <ThirdWrap>
-      <ProjectWrap onWheel={indexInfinite}>
+      <ProjectWrap onWheel={(indexInfinite)}>
         <div className={!startSliding ? undefined : `movingGone${randomStatus.randomIndex}`}>
           <ProjectBox2>
             <ProjectTextWrap>
